@@ -1,7 +1,7 @@
 CC=gcc
 
 CFLAGS=-Wall -O3 -g -std=gnu11 -fno-strict-aliasing -Isrc -DLUA_USE_POSIX
-LFLAGS=-lSDL2 -lm
+LFLAGS=-lSDL2 -lm -llua5.2
 
 CFILES:=$(shell find src/ -name *.c)
 OFILES:=$(CFILES:.c=.o)
