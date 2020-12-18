@@ -10,7 +10,7 @@ A fork of [lite](https://github.com/rxi/lite)
 - SDL2
 - Lua 5.2
 
-On Ubuntu
+On Debian/Ubuntu
 
 ```
 sudo apt install libSDL2-dev liblua5.2-dev
