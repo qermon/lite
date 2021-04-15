@@ -6,7 +6,7 @@ LFLAGS=-lSDL2 -lm -llua5.2
 CFILES:=$(shell find src/ -name *.c)
 OFILES:=$(CFILES:.c=.o)
 
-BINARY=lite
+BINARY=qite
 
 $(BINARY): $(OFILES)
 	$(CC) $^ $(LFLAGS) -o $@
