@@ -77,6 +77,11 @@ function Doc:load(filename)
     end
     table.insert(self.lines, line .. "\n")
   end
+  if config.show_final_newline then
+    if #self.lines > 0 and self.lines[#self.lines]:sub(-1) == "\n" then
+      table.insert(self.lines, "\n")
+    end
+  end
   if #self.lines == 0 then
     table.insert(self.lines, "\n")
   end
@@ -89,6 +94,11 @@ function Doc:save(filename)
   filename = filename or assert(self.filename, "no filename set to default to")
   local fp = assert( io.open(filename, "wb") )
   for _, line in ipairs(self.lines) do
+    if config.show_final_newline then
+      if i == #self.lines and line:sub(-1) == "\n" then
+        line = line:sub(1, -2)
+      end
+    end
     if self.crlf then line = line:gsub("\n", "\r\n") end
     fp:write(line)
   end
