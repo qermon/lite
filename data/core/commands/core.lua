@@ -98,4 +98,10 @@ command.add(nil, {
       doc:save(filename)
     end
   end,
+
+  ["core:change-directory"] = function()
+    core.command_view:enter("Path", function(path)
+      pcall(system.chdir, path)
+    end, common.path_suggest)
+  end,
 })
