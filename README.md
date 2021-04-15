@@ -18,7 +18,7 @@ sudo apt install libSDL2-dev liblua5.2-dev
 On Arch-based
 
 ```
-pacmam -S sdl2 lua52
+pacman -S sdl2 lua52
 ```
 
 ## Build
