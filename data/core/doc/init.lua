@@ -93,7 +93,7 @@ end
 function Doc:save(filename)
   filename = filename or assert(self.filename, "no filename set to default to")
   local fp = assert( io.open(filename, "wb") )
-  for _, line in ipairs(self.lines) do
+  for i, line in ipairs(self.lines) do
     if config.show_final_newline then
       if i == #self.lines and line:sub(-1) == "\n" then
         line = line:sub(1, -2)
