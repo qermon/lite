@@ -127,9 +127,8 @@ int main(int argc, char **argv) {
     "  package.path = EXEDIR .. '/data/?/init.lua;' .. package.path\n"
 #ifndef _WIN32
     "  package.path = os.getenv('HOME') .. '/.config/qite/?/init.lua;' .. package.path\n"
-    "  package.path = os.getenv('HOME') .. '/.config/qite/?/?.lua;' .. package.path\n"
-    "  package.path = os.getenv('HOME') .. '/.config/qite/?/init.lua;' .. package.path\n"
-    "  package.path = os.getenv('HOME') .. '/.config/qite/?/?.lua;' .. package.path\n"
+    "  package.path = os.getenv('HOME') .. '/.config/qite/?.lua;' .. package.path\n"
+    "  package.path = os.getenv('HOME') .. '/.config/qite/?/?/init.lua;' .. package.path\n"
 #endif
     "  core = require('core')\n"
     "  core.init()\n"
